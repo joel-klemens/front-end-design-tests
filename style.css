@@ -1,0 +1,62 @@
+body {
+    background-color: #20232a;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    padding-left: calc((100% - 1440px) / 2);
+    padding-right: calc((100% - 1440px) / 2);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 120vh;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 120vh;
+}
+
+.dog-pics {
+    display: flex;
+}
+
+.dog {
+    padding: 10px; 
+}
+
+.dog:nth-child(2) {
+    transition-delay: 400ms;
+}
+.dog:nth-child(3) {
+    transition-delay: 800ms;
+}
+.dog:nth-child(4) {
+    transition-delay: 1200ms;
+}
+.dog:nth-child(5) {
+    transition-delay: 1600ms;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 2s;
+    transform: translateX(-100%);
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .hidden {
+        transition: none;
+    }
+}
+
+.visible {
+    opacity: 1;
+    filter: blur(0); 
+    transform: translateX(0);
+}
